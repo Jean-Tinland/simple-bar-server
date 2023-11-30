@@ -81,11 +81,5 @@ wss.on("connection", (ws, req) => {
     return;
   }
 
-  console.log(`New widget connected: "${widget}".`);
-
   Object.assign(ws, { widget, userWidgetIndex });
-
-  ws.on("close", () => {
-    console.log(`Widget "${widget}" disconnected.`);
-  });
 });
