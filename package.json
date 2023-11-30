@@ -1,0 +1,16 @@
+{
+  "name": "simple-bar-server",
+  "licence": "MIT",
+  "version": "1.0.0",
+  "description": "A node server allowing to communicate with simple-bar.",
+  "type": "module",
+  "engines": {
+    "node": ">=18.11.0"
+  },
+  "scripts": {
+    "start": "node --watch index.js"
+  },
+  "dependencies": {
+    "ws": "^8.14.2"
+  }
+}
