@@ -1,10 +1,12 @@
 # <img src="./images/logo-simple-bar-server.png" width="200" alt="simple-bar-server" />
 
-A server for [simple-bar](https://www.jeantinland.com/en/toolbox/simple-bar) that enables communication with it by requesting simple-bar' data widgets refreshes or toggling with simple `curl` commands. It is an ultra small node.js http server opening a websocket connection with simple-bar. Check `index.js` file to see how it works.
+A server for [simple-bar](https://github.com/Jean-Tinland/simple-bar) that enables communication with its data widgets and allow them to be refreshed or toggled with simple `curl` commands.
+
+It is an ultra small node.js http server opening a websocket connection with [simple-bar](https://github.com/Jean-Tinland/simple-bar). Check `index.js` file to see how it works.
 
 ## Status
 
-This project is ready to be used but only work with the latest version of [simple-bar](https://github.com/Jean-Tinland/simple-bar). It is really young so feel free to open an issue if you find a bug or have a feature request.
+This project is ready to be used but only work with the latest version of [simple-bar](https://github.com/Jean-Tinland/simple-bar). It is a really fresh project so feel free to open an issue if you find a bug or have a feature request.
 
 I plan to maintain it and add new features like the refreshing of spaces & process widgets allowing to avoid the use of applescript notification system to refresh simple-bar thus improve its responsiveness.
 
