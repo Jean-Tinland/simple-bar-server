@@ -18,6 +18,14 @@ In order to run this project, you will need to install globally the following de
 
 ## Installation
 
+Clone this project anywhere on your computer:
+
+```bash
+git clone https://github.com/Jean-Tinland/simple-bar-server.git
+```
+
+Then, go to the project folder and run the following commands:
+
 ```bash
 # Install dependencies
 npm install
