@@ -14,6 +14,7 @@ const WIDGETS = [
   "mpd",
   "music",
   "netstats",
+  "cpu",
   "sound",
   "spotify",
   "stock",
@@ -59,10 +60,13 @@ const server = http.createServer((req, res) => {
   }
 
   for (const client of wss.clients) {
-    if (
-      widget === client.widget &&
-      (!userWidgetIndex || client.userWidgetIndex === userWidgetIndex)
-    ) {
+    const isTargetedWidget = client.widget === widget;
+    const isTargetedUserWidget =
+      !userWidgetIndex || client.userWidgetIndex === userWidgetIndex;
+
+    const isValidTarget = isTargetedWidget && isTargetedUserWidget;
+
+    if (isValidTarget) {
       client.send(JSON.stringify({ action }));
     }
   }
