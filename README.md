@@ -48,9 +48,44 @@ The server can be configured by editing the `config.json` file in which you can 
 
 ## Usage
 
-### Widgets refresh
+You can request simple-bar to refresh or toggle its widgets by sending a `GET` request to the server.
 
-You can request simple-bar to refresh or toggle its widgets by sending a `GET` request to the `/refresh` endpoint.
+A request is composed of the following parts:
+
+```bash
+# Toggle or refresh a widget
+curl http://localhost:7776/<widget-name>/<action>
+```
+
+"widget-name" is the name of the widget you want to refresh or toggle (see the list below for allowed widget names) and "action" is the action you want to perform on it.
+
+- `battery`
+- `browser-track`
+- `cpu`
+- `crypto`
+- `date-display`
+- `keyboard`
+- `mic`
+- `mpd`
+- `music`
+- `netstats`
+- `sound`
+- `spotify`
+- `stock`
+- `time`
+- `viscosity-vpn`
+- `weather`
+- `wifi`
+- `zoom`
+
+For the user widgets, the request is composed of the following parts:
+
+```bash
+# Toggle or refresh a user widget
+curl http://localhost:7776/user-widget/<action>/<id>
+```
+
+"id" is the number of the widget displayed in each custom user widget in the settings module (it is based on their order).
 
 Examples:
 
@@ -67,24 +102,3 @@ curl http://localhost:7776/user-widget/refresh/1
 # Toggle the user widget n°1 visibility
 curl http://localhost:7776/user-widget/toggle/1
 ```
-
-Widget list:
-
-- "battery"
-- "browser-track"
-- "cpu"
-- "crypto"
-- "date-display"
-- "keyboard"
-- "mic"
-- "mpd"
-- "music"
-- "netstats"
-- "sound"
-- "spotify"
-- "stock"
-- "time"
-- "viscosity-vpn"
-- "weather"
-- "wifi"
-- "zoom"
