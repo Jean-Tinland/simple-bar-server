@@ -1,6 +1,6 @@
 # <img src="./images/logo-simple-bar-server.png" width="200" alt="simple-bar-server" />
 
-A server for [simple-bar](https://www.jeantinland.com/en/toolbox/simple-bar) that enables communication with it by requesting simple-bar' data widgets refreshes or toggling with simple `curl` commands.
+A server for [simple-bar](https://www.jeantinland.com/en/toolbox/simple-bar) that enables communication with it by requesting simple-bar' data widgets refreshes or toggling with simple `curl` commands. It is an ultra small node.js http server opening a websocket connection with simple-bar. Check `index.js` file to see how it works.
 
 ## Status
 
@@ -8,17 +8,13 @@ This project is ready to be used but only work with the latest version of [simpl
 
 I plan to maintain it and add new features like the refreshing of spaces & process widgets allowing to avoid the use of applescript notification system to refresh simple-bar thus improve its responsiveness.
 
-## Concept
-
-This project enables communication with `simple-bar` by requesting its data widgets to refresh, show or hide with simple `curl` commands. It is an ultra small node.js http server opening a websocket connection with simple-bar. Check `index.js` file to see how it works.
-
 ## Dependencies
 
 In order to run this project, you will need to install globally the following dependencies:
 
-- node >=18.11.0
-- npm
-- pm2 >=5.3.0
+- **node >=18.11.0**
+- **npm**
+- **pm2 >=5.3.0**
 
 ## Installation
 
@@ -31,7 +27,7 @@ git clone https://github.com/Jean-Tinland/simple-bar-server.git
 Then, go to the project folder and run the following commands:
 
 ```bash
-# Install dependencies
+# Install local dependencies
 npm install
 
 # Run the server
