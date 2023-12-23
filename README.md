@@ -4,9 +4,13 @@ A server for [simple-bar](https://www.jeantinland.com/en/toolbox/simple-bar) tha
 
 ## Status
 
-This project is ready to be used but only work with the latest version of [simple-bar](https://github.com/Jean-Tinland/simple-bar).
+This project is ready to be used but only work with the latest version of [simple-bar](https://github.com/Jean-Tinland/simple-bar). It is really young so feel free to open an issue if you find a bug or have a feature request.
 
-I will continue to maintain it and add new features like the refreshing of spaces & process widgets allowing to avoid the use of applescript notification system to refresh simple-bar thus improve its responsiveness.
+I plan to maintain it and add new features like the refreshing of spaces & process widgets allowing to avoid the use of applescript notification system to refresh simple-bar thus improve its responsiveness.
+
+## Concept
+
+This project enables communication with `simple-bar` by requesting its data widgets to refresh, show or hide with simple `curl` commands. It is an ultra small node.js http server opening a websocket connection with simple-bar. Check `index.js` file to see how it works.
 
 ## Dependencies
 
