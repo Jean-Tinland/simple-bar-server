@@ -127,7 +127,7 @@ curl http://localhost:7776/widget/user-widget/toggle/1
 
 > Not implemented yet
 
-When using the `yabai` realm, `target` is the name of the target you want to refresh (see the list below for allowed targets) and "action" is the action you want to perform on it (the only allowed action is `refresh`).
+When using the `yabai` realm, `target` is the name of the target you want to refresh (see the list below for allowed targets) and `action` is the action you want to perform on it (the only allowed action is `refresh`).
 
 Here is the list of the available targets:
 
