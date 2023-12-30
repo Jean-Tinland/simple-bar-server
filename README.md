@@ -75,7 +75,7 @@ curl http://localhost:7776/<realm>/<target>/<action>
 
 ### Widgets
 
-When using the `widget` realm, `target` is the name of the widget you want to refresh or toggle (see the list below for allowed widget names) and `action` is the action you want to perform on it (allowed actions are "refresh" or "toggle").
+When using the `widget` realm, `target` is the name of the widget you want to refresh or toggle (see the list below for allowed widget names) and `action` is the action you want to perform on it (allowed actions are `refresh` or `toggle`).
 
 Here is the list of the available widgets:
 
@@ -127,7 +127,7 @@ curl http://localhost:7776/widget/user-widget/toggle/1
 
 > Not implemented yet
 
-When using the `yabai` realm, `target` is the name of the target you want to refresh (see the list below for allowed targets) and "action" is the action you want to perform on it (the only allowed action is "refresh").
+When using the `yabai` realm, `target` is the name of the target you want to refresh (see the list below for allowed targets) and "action" is the action you want to perform on it (the only allowed action is `refresh`).
 
 Here is the list of the available targets:
 
