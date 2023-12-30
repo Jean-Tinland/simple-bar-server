@@ -8,6 +8,8 @@ It is an ultra small node.js http server opening a websocket connection with [si
 
 This project is ready to be used but only work with the latest version of [simple-bar](https://github.com/Jean-Tinland/simple-bar). It is a really fresh project so feel free to open an issue if you find a bug or have a feature request.
 
+> As it is a young project, some features may be subject to change.
+
 I plan to maintain it and add new features like the refreshing of spaces & process widgets allowing to avoid the use of applescript notification system to refresh simple-bar thus improve its responsiveness.
 
 ## Dependencies
