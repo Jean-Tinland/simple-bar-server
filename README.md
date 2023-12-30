@@ -45,6 +45,8 @@ pm2 startup
 pm2 save
 ```
 
+> On the first run, node will ask for Übersicht control permissions. You need to allow it to be able to refresh simple-bar automatically on simple-bar-server restart.
+
 ## Configuration
 
 The server can be configured by editing the `config.json` file in which you can set the ports for both the server and the websocket.
