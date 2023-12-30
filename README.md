@@ -68,11 +68,16 @@ A request is composed of the following parts:
 
 ```bash
 # Toggle or refresh a widget
-curl http://localhost:7776/<realm>/<widget-name>/<action>
+curl http://localhost:7776/<realm>/<target>/<action>
 ```
 
-"realm" is either "widget", "yabai" or "missive". Only the "widget" realm is currently supported.
-"widget-name" is the name of the widget you want to refresh or toggle (see the list below for allowed widget names) and "action" is the action you want to perform on it.
+`realm` is either `widget`, `yabai` or `missive`. Only the `widget` realm is currently supported.
+
+### Widgets
+
+When using the `widget` realm, `target` is the name of the widget you want to refresh or toggle (see the list below for allowed widget names) and `action` is the action you want to perform on it (allowed actions are "refresh" or "toggle").
+
+Here is the list of the available widgets:
 
 - `battery`
 - `browser-track`
@@ -100,7 +105,7 @@ For the user widgets, the request is composed of the following parts:
 curl http://localhost:7776/<realm>/user-widget/<action>/<id>
 ```
 
-"id" is the number of the widget displayed in each custom user widget in the settings module (it is based on their order).
+`id` is the number of the widget displayed in each custom user widget in the settings module (it is based on their order).
 
 Examples:
 
@@ -117,3 +122,21 @@ curl http://localhost:7776/widget/user-widget/refresh/1
 # Toggle the user widget n°1 visibility
 curl http://localhost:7776/widget/user-widget/toggle/1
 ```
+
+### Yabai
+
+> Not implemented yet
+
+When using the `yabai` realm, `target` is the name of the target you want to refresh (see the list below for allowed targets) and "action" is the action you want to perform on it (the only allowed action is "refresh").
+
+Here is the list of the available targets:
+
+- `spaces`
+- `windows`
+- `displays`
+
+### Missive
+
+> Not implemented yet
+
+Description coming soon...
