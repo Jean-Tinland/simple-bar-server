@@ -66,9 +66,10 @@ A request is composed of the following parts:
 
 ```bash
 # Toggle or refresh a widget
-curl http://localhost:7776/<widget-name>/<action>
+curl http://localhost:7776/<realm>/<widget-name>/<action>
 ```
 
+"realm" is either "widget", "yabai" or "missive". Only the "widget" realm is currently supported.
 "widget-name" is the name of the widget you want to refresh or toggle (see the list below for allowed widget names) and "action" is the action you want to perform on it.
 
 - `battery`
@@ -94,7 +95,7 @@ For the user widgets, the request is composed of the following parts:
 
 ```bash
 # Toggle or refresh a user widget
-curl http://localhost:7776/user-widget/<action>/<id>
+curl http://localhost:7776/<realm>/user-widget/<action>/<id>
 ```
 
 "id" is the number of the widget displayed in each custom user widget in the settings module (it is based on their order).
@@ -103,14 +104,14 @@ Examples:
 
 ```bash
 # Force time widget refresh
-curl http://localhost:7776/time/refresh
+curl http://localhost:7776/widget/time/refresh
 
 # Toggle time widget visibility
-curl http://localhost:7776/time/toggle
+curl http://localhost:7776/widget/time/toggle
 
 # Force the user widget n°1 to refresh
-curl http://localhost:7776/user-widget/refresh/1
+curl http://localhost:7776/widget/user-widget/refresh/1
 
 # Toggle the user widget n°1 visibility
-curl http://localhost:7776/user-widget/toggle/1
+curl http://localhost:7776/widget/user-widget/toggle/1
 ```
