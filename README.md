@@ -165,6 +165,8 @@ yabai -m signal --add event=display_moved action="curl http://localhost:7776/yab
 
 Adapt the port number if you changed it in the config file.
 
+Events overlapping is not an issue as the server will queue consecutive refreshes requested by `yabai` signals in order to prevent multiple useless re-renders..
+
 ### Missive
 
 > Not implemented yet
