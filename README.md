@@ -2,10 +2,8 @@
 
 A server for [simple-bar](https://github.com/Jean-Tinland/simple-bar) that enables communication with its data widgets and allow them to be refreshed or toggled with simple `curl` commands.
 
-It is an ultra small node.js http server opening a websocket connection with [simple-bar](https://github.com/Jean-Tinland/simple-bar).
-
 > [!NOTE]
-> There are no external call to any API, it is just a local node server on which simple-bar's components will be able to connect to via websockets.
+> There are no external call to any API, it is just a local small node.js server on which [simple-bar](https://github.com/Jean-Tinland/simple-bar)'s components will be able to connect to via websockets.
 > Check `index.js` file to see how it works.
 
 ## Status
