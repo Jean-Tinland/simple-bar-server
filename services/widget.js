@@ -34,7 +34,7 @@ export default function widgetAction(
   }
 
   for (const client of clients) {
-    const isTargetedWidget = client.widget === kind;
+    const isTargetedWidget = client.target === kind;
 
     const isTargetedUserWidget =
       !userWidgetIndex || client.userWidgetIndex === userWidgetIndex;

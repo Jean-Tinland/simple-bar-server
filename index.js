@@ -3,6 +3,7 @@ import { WebSocketServer } from "ws";
 import { exec } from "child_process";
 import config from "./config.json" assert { type: "json" };
 import widgetAction from "./services/widget.js";
+import yabaiAction from "./services/yabai.js";
 import * as DATA from "./data.js";
 
 process.title = "simple-bar-server";
@@ -30,6 +31,10 @@ const server = http.createServer((req, res) => {
     widgetAction(res, wss.clients, kind, action, userWidgetIndex);
   }
 
+  if (realm === "yabai") {
+    yabaiAction(res, wss.clients, kind, action);
+  }
+
   res.end();
 });
 
@@ -44,13 +49,13 @@ server.on("listening", () => {
 
 wss.on("connection", (ws, req) => {
   const url = new URL(req.url, "http://localhost");
-  const widget = url.searchParams.get("widget");
+  const target = url.searchParams.get("target");
   const userWidgetIndex = url.searchParams.get("userWidgetIndex");
 
-  if (!widget) {
+  if (!target) {
     ws.close();
     return;
   }
 
-  Object.assign(ws, { widget, userWidgetIndex });
+  Object.assign(ws, { target, userWidgetIndex });
 });
