@@ -8,10 +8,6 @@ It is an ultra small node.js http server opening a websocket connection with [si
 
 This project is ready to be used but only work with the latest version of [simple-bar](https://github.com/Jean-Tinland/simple-bar). It is a really fresh project so feel free to open an issue if you find a bug or have a feature request.
 
-> As it is a young project, some features may be subject to change.
-
-I plan to maintain it and add new features like the refreshing of spaces & process widgets allowing to avoid the use of applescript notification system to refresh simple-bar thus improve its responsiveness.
-
 ## Dependencies
 
 In order to run this project, you will need to install globally the following dependencies:
@@ -59,6 +55,9 @@ The server can be configured by editing the `config.json` file in which you can 
   }
 }
 ```
+
+> [!IMPORTANT]
+> Adapt the port number in the examples below if you changed it in the config file.
 
 ## Usage
 
@@ -163,7 +162,8 @@ yabai -m signal --add event=display_removed action="curl http://localhost:7776/y
 yabai -m signal --add event=display_moved action="curl http://localhost:7776/yabai/displays/refresh" label="Refresh simple-bar displays when a dispay is moved"
 ```
 
-Adapt the port number if you changed it in the config file.
+> [!NOTE]
+> Adapt the port number if you changed it in the config file.
 
 Events overlapping is not an issue as the server will queue consecutive refreshes requested by `yabai` signals in order to prevent multiple useless re-renders..
 
