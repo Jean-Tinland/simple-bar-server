@@ -63,6 +63,9 @@ The server can be configured by editing the `config.json` file in which you can 
 
 ## Usage
 
+> [!IMPORTANT]
+> First, you'll need to enable the websocket connection in `simple-bar`: [see "Enable simple-bar-server connection" and "Refresh spaces & process with simple-bar-server" in "Setup" section](https://www.jeantinland.com/en/toolbox/simple-bar/documentation/global-settings/).
+
 You can request simple-bar to refresh or toggle its widgets by sending a `GET` request to the server.
 
 A request is composed of the following parts:
