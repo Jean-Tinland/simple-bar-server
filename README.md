@@ -75,7 +75,7 @@ A request is composed of the following parts:
 curl http://localhost:7776/<realm>/<target>/<action>
 ```
 
-`realm` is either `widget`, `yabai` or `missive`. Only the `widget` realm is currently supported.
+`realm` is either `widget`, `yabai`, `skhd` or `missive`. Only the `widget` realm is currently supported.
 
 ### Widgets
 
@@ -171,6 +171,21 @@ yabai -m signal --add event=display_moved action="curl http://localhost:7776/yab
 > Adapt the port number if you changed it in the config file.
 
 Events overlapping is not an issue as the server will queue consecutive refreshes requested by `yabai` signals in order to prevent multiple useless re-renders..
+
+### skhd
+
+When using the `skhd` realm, `target` is the name of the target you want to refresh (see the list below for allowed targets) and `action` is the action you want to perform on it (the only allowed action is `refresh`).
+
+Here is the list of the available targets:
+
+- `mode`
+
+Examples:
+
+```bash
+# Force skhd mode indicator refresh
+curl http://localhost:7776/skhd/mode/refresh
+```
 
 ### Missive
 

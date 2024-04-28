@@ -4,6 +4,7 @@ import { exec } from "child_process";
 import config from "./config.json" assert { type: "json" };
 import widgetAction from "./services/widget.js";
 import yabaiAction from "./services/yabai.js";
+import skhdAction from "./services/skhd.js";
 import * as DATA from "./data.js";
 
 process.title = "simple-bar-server";
@@ -33,6 +34,10 @@ const server = http.createServer((req, res) => {
 
   if (realm === "yabai") {
     yabaiAction(res, wss.clients, kind, action);
+  }
+
+  if (realm === "skhd") {
+    skhdAction(res, wss.clients, kind, action);
   }
 
   res.end();
