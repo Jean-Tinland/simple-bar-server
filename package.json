@@ -12,6 +12,6 @@
     "start": "pm2 startOrRestart ./ecosystem.config.cjs"
   },
   "dependencies": {
-    "ws": "^8.14.2"
+    "ws": "8.17.0"
   }
 }
