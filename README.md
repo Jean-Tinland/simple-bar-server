@@ -14,7 +14,7 @@ This project is ready to be used but only work with the latest version of [simpl
 
 In order to run this project, you will need to install globally the following dependencies:
 
-- **node >=18.11.0**
+- **node >=22.2.0**
 - **npm**
 - **pm2 >=5.3.0**
 

@@ -1,7 +1,8 @@
 import http from "http";
 import { WebSocketServer } from "ws";
 import { exec } from "child_process";
-import config from "./config.json" assert { type: "json" };
+import config from "./config.json" with { type: "json" };
+// import config from "./config.json";
 import widgetAction from "./services/widget.js";
 import yabaiAction from "./services/yabai.js";
 import skhdAction from "./services/skhd.js";
