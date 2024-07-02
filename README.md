@@ -47,15 +47,17 @@ pm2 save
 
 ## Configuration
 
-The server can be configured by editing the `config.json` file in which you can set the ports for both the server and the websocket.
+The server can be configured by editing the `config.js` file in which you can set the ports for both the server and the websocket.
 
-```json
-{
-  "ports": {
-    "http": 7776,
-    "ws": 7777
-  }
-}
+```js
+const config = {
+  ports: {
+    http: 7776,
+    ws: 7777,
+  },
+};
+
+export default config;
 ```
 
 > [!IMPORTANT]
