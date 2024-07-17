@@ -8,8 +8,10 @@ import skhdAction from "./services/skhd.js";
 import * as DATA from "./data.js";
 
 process.title = "simple-bar-server";
-
-const wss = new WebSocketServer({ port: config.ports.ws });
+const wssServer = http.createServer();
+wssServer.listen(config.ports.ws, "127.0.0.1", function() {
+});
+const wss = new WebSocketServer({ server: wssServer });
 
 const server = http.createServer((req, res) => {
   res.writeHead(200, { "Content-Type": "text/plain" });
