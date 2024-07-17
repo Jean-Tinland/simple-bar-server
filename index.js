@@ -8,9 +8,9 @@ import skhdAction from "./services/skhd.js";
 import * as DATA from "./data.js";
 
 process.title = "simple-bar-server";
+
 const wssServer = http.createServer();
-wssServer.listen(config.ports.ws, "127.0.0.1", function() {
-});
+wssServer.listen(config.ports.ws, "127.0.0.1");
 const wss = new WebSocketServer({ server: wssServer });
 
 const server = http.createServer((req, res) => {
