@@ -30,4 +30,4 @@ export const WIDGETS = [
   "zoom",
 ];
 
-export const WIDGET_ACTIONS = ["toggle", "refresh"];
+export const WIDGET_ACTIONS = ["toggle", "enable", "disable", "refresh"];

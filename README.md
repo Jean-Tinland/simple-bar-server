@@ -73,7 +73,7 @@ You can request simple-bar to refresh or toggle its widgets by sending a `GET` r
 A request is composed of the following parts:
 
 ```bash
-# Toggle or refresh a widget
+# Toggle, enable, disable or refresh a widget
 curl http://localhost:7776/<realm>/<target>/<action>
 ```
 
@@ -81,7 +81,7 @@ curl http://localhost:7776/<realm>/<target>/<action>
 
 ### Widgets
 
-When using the `widget` realm, `target` is the name of the widget you want to refresh or toggle (see the list below for allowed widget names) and `action` is the action you want to perform on it (allowed actions are `refresh` or `toggle`).
+When using the `widget` realm, `target` is the name of the widget you want to refresh or toggle (see the list below for allowed widget names) and `action` is the action you want to perform on it (allowed actions are `refresh`, `toggle`, `disable` or `enable`).
 
 Here is the list of the available widgets:
 
@@ -107,7 +107,7 @@ Here is the list of the available widgets:
 For the user widgets, the request is composed of the following parts:
 
 ```bash
-# Toggle or refresh a user widget
+# Toggle, disable, enable or refresh a user widget
 curl http://localhost:7776/<realm>/user-widget/<action>/<id>
 ```
 
@@ -127,7 +127,16 @@ curl http://localhost:7776/widget/user-widget/refresh/1
 
 # Toggle the user widget n°1 visibility
 curl http://localhost:7776/widget/user-widget/toggle/1
+
+# Hide cpu widget
+curl http://localhost:7776/widget/cpu/disable
+
+# Show cpu widget
+curl http://localhost:7776/widget/cpu/enable
 ```
+
+> [!NOTE]
+> If you try to hide or show a widget already in the desired state, the request will be ignored.
 
 ### Yabai
 
