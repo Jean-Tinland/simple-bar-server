@@ -1,4 +1,4 @@
-export const REALMS = ["yabai", "skhd", "widget", "missive"];
+export const REALMS = ["yabai", "skhd", "aerospace", "widget", "missive"];
 
 export const YABAI = ["spaces", "windows", "displays"];
 
@@ -7,6 +7,10 @@ export const YABAI_ACTIONS = ["refresh"];
 export const SKHD = ["mode"];
 
 export const SKHD_ACTIONS = ["refresh"];
+
+export const AEROSPACE = ["spaces"];
+
+export const AEROSPACE_ACTIONS = ["refresh"];
 
 export const WIDGETS = [
   "battery",

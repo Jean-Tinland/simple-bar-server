@@ -13,6 +13,7 @@ A server for [simple-bar](https://github.com/Jean-Tinland/simple-bar) that enabl
 - Refresh, toggle, enable or disable simple-bar widgets
 - Refresh yabai spaces, windows and displays simple-bar widgets
 - Refresh simple-bar' skhd mode indicator
+- Refresh AeroSpace spaces widget
 
 ## Installation
 
@@ -26,4 +27,4 @@ You'll find the full installation guide in the [documentation](https://www.jeant
 
 ## Status
 
-This project is ready to be used but only work with the latest version of [simple-bar](https://github.com/Jean-Tinland/simple-bar). It is a really fresh project so feel free to open an issue if you find a bug or have a feature request.
+This project is ready to be used but only work with the latest version of [simple-bar](https://github.com/Jean-Tinland/simple-bar). Feel free to open an issue if you find a bug or have a feature request.

@@ -5,6 +5,7 @@ import config from "./config.js";
 import widgetAction from "./services/widget.js";
 import yabaiAction from "./services/yabai.js";
 import skhdAction from "./services/skhd.js";
+import aerospaceAction from "./services/aerospace.js";
 import * as DATA from "./data.js";
 
 process.title = "simple-bar-server";
@@ -41,6 +42,10 @@ const server = http.createServer((req, res) => {
 
   if (realm === "skhd") {
     skhdAction(res, wss.clients, kind, action);
+  }
+
+  if (realm === "aerospace") {
+    aerospaceAction(res, wss.clients, kind, action);
   }
 
   res.end();
