@@ -18,6 +18,7 @@ export const WIDGETS = [
   "crypto",
   "date-display",
   "keyboard",
+  "memory",
   "mic",
   "mpd",
   "music",
