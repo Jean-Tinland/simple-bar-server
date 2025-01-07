@@ -18,7 +18,10 @@ const wss = new WebSocketServer({ server: wssServer });
 const server = http.createServer((req, res) => {
   res.writeHead(200, { "Content-Type": "text/plain" });
 
-  const [realm, kind, action, userWidgetIndex] = req.url.split("/").slice(1);
+  const url = new URL(req.url, "http://localhost");
+  const [realm, kind, action, userWidgetIndex] = url.pathname
+    .split("/")
+    .slice(1);
 
   if (!realm) {
     res.statusCode = 400;
