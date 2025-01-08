@@ -36,3 +36,5 @@ export const WIDGETS = [
 ];
 
 export const WIDGET_ACTIONS = ["toggle", "enable", "disable", "refresh"];
+
+export const MISSIVE_ACTIONS = ["push"];

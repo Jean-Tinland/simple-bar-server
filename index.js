@@ -6,6 +6,7 @@ import widgetAction from "./services/widget.js";
 import yabaiAction from "./services/yabai.js";
 import skhdAction from "./services/skhd.js";
 import aerospaceAction from "./services/aerospace.js";
+import missiveAction from "./services/missive.js";
 import * as DATA from "./data.js";
 
 process.title = "simple-bar-server";
@@ -19,9 +20,8 @@ const server = http.createServer((req, res) => {
   res.writeHead(200, { "Content-Type": "text/plain" });
 
   const url = new URL(req.url, "http://localhost");
-  const [realm, kind, action, userWidgetIndex] = url.pathname
-    .split("/")
-    .slice(1);
+  const urlSegments = url.pathname.split("/").slice(1);
+  const [realm, kind, action, userWidgetIndex] = urlSegments;
 
   if (!realm) {
     res.statusCode = 400;
@@ -51,13 +51,17 @@ const server = http.createServer((req, res) => {
     aerospaceAction(res, wss.clients, kind, action);
   }
 
+  if (realm === "missive") {
+    missiveAction(req, res, wss.clients, kind);
+  }
+
   res.end();
 });
 
 server.listen(config.ports.http, "127.0.0.1");
 
 server.on("listening", () => {
-  console.log(
+  console.info(
     `simple-bar-server running at http://localhost:${config.ports.http}`
   );
   exec(`osascript -e 'tell application id "tracesOf.Uebersicht" to refresh'`);
