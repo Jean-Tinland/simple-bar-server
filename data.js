@@ -18,6 +18,7 @@ export const WIDGETS = [
   "crypto",
   "date-display",
   "keyboard",
+  "gpu",
   "memory",
   "mic",
   "mpd",
@@ -32,6 +33,7 @@ export const WIDGETS = [
   "viscosity-vpn",
   "weather",
   "wifi",
+  "youtube-music",
   "zoom",
 ];
 
