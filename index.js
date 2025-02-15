@@ -6,6 +6,7 @@ import widgetAction from "./services/widget.js";
 import yabaiAction from "./services/yabai.js";
 import skhdAction from "./services/skhd.js";
 import aerospaceAction from "./services/aerospace.js";
+import flashspaceAction from "./services/flashspace.js";
 import missiveAction from "./services/missive.js";
 import * as DATA from "./data.js";
 
@@ -49,6 +50,10 @@ const server = http.createServer((req, res) => {
 
   if (realm === "aerospace") {
     aerospaceAction(res, wss.clients, kind, action);
+  }
+
+  if (realm === "flashspace") {
+    flashspaceAction(res, wss.clients, kind, action);
   }
 
   if (realm === "missive") {
