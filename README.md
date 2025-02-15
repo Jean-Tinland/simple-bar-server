@@ -14,6 +14,7 @@ A server for [simple-bar](https://github.com/Jean-Tinland/simple-bar) that enabl
 - Refresh yabai spaces, windows and displays simple-bar widgets
 - Refresh simple-bar' skhd mode indicator
 - Refresh AeroSpace spaces widget
+- Refresh FlashSpace spaces widget
 - Send notifications (missives) for simple-bar to display
 
 ## Installation
