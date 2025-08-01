@@ -13,6 +13,9 @@ export default class Queue {
     this.head = 0;
     this.tail = 0;
   }
+  get() {
+    return this.elements[this.tail - 1];
+  }
   peek() {
     return this.elements[this.head];
   }

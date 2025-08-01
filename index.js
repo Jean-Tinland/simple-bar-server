@@ -23,6 +23,7 @@ const server = http.createServer((req, res) => {
   const url = new URL(req.url, "http://localhost");
   const urlSegments = url.pathname.split("/").slice(1);
   const [realm, kind, action, userWidgetIndex] = urlSegments;
+  const params = new URLSearchParams(url.search);
 
   if (!realm) {
     res.statusCode = 400;
@@ -49,7 +50,7 @@ const server = http.createServer((req, res) => {
   }
 
   if (realm === "aerospace") {
-    aerospaceAction(res, wss.clients, kind, action);
+    aerospaceAction(res, wss.clients, kind, action, params);
   }
 
   if (realm === "flashspace") {
@@ -67,7 +68,7 @@ server.listen(config.ports.http, "127.0.0.1");
 
 server.on("listening", () => {
   console.info(
-    `simple-bar-server running at http://localhost:${config.ports.http}`
+    `simple-bar-server running at http://localhost:${config.ports.http}`,
   );
   exec(`osascript -e 'tell application id "tracesOf.Uebersicht" to refresh'`);
 });
