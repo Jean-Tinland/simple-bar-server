@@ -8,6 +8,8 @@ A server for [simple-bar](https://github.com/Jean-Tinland/simple-bar) that enabl
 > There are no external call to any API, it is just a local small node.js server on which [simple-bar](https://github.com/Jean-Tinland/simple-bar)'s components will be able to connect to via websockets.
 > Check `index.js` file to see how it works.
 
+**Notice: As I am working simultaneously on a lot of projects, things here may seem to move slowly but they are still in progress. I'm always monitoring my notifications and messages, so if you have any questions or want to chat about anything, feel free [to reach out](https://www.jeantinland.com/contact/)!**
+
 ## Features
 
 - Refresh, toggle, enable or disable simple-bar widgets
