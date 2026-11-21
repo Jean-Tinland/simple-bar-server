@@ -28,6 +28,7 @@ export const WIDGETS = [
   "netstats",
   "next-meeting",
   "notifications",
+  "pomodoro",
   "sound",
   "spotify",
   "stock",
